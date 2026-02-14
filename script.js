@@ -100,6 +100,18 @@ function sayYes() {
     document.getElementById('buttonsContainer').innerHTML =
         '<p class="celebration">I knew you\'d say yes! 😘💕</p>';
 
+    // Play YouTube song as hidden background music
+    const musicFrame = document.createElement('iframe');
+    musicFrame.src = 'https://www.youtube.com/embed/Ig9C781cZlw?autoplay=1&loop=1&list=RDIg9C781cZlw';
+    musicFrame.allow = 'autoplay; encrypted-media';
+    musicFrame.style.position = 'fixed';
+    musicFrame.style.top = '-9999px';
+    musicFrame.style.left = '-9999px';
+    musicFrame.style.width = '1px';
+    musicFrame.style.height = '1px';
+    musicFrame.style.border = 'none';
+    document.body.appendChild(musicFrame);
+
     // Add extra confetti celebration
     const container = document.getElementById('confetti');
     const colors = ['#f8a4b8', '#ff6b81', '#f7c5cc', '#e84393', '#fd79a8', '#ff0044', '#ff4d6d'];
