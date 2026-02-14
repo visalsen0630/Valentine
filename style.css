@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fce4e4;
+    font-family: 'Patrick Hand', cursive;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+}
+
+.bear-container {
+    margin-bottom: 10px;
+}
+
+.bear-gif {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.question {
+    font-size: 2.2rem;
+    color: #b5651d;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    border-radius: 50px;
+    font-family: 'Patrick Hand', cursive;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.yes-btn {
+    padding: 14px 40px;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #f8a4b8, #f7c5cc);
+    color: #c0392b;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(248, 164, 184, 0.4);
+}
+
+.yes-btn:hover {
+    filter: brightness(1.05);
+    box-shadow: 0 6px 20px rgba(248, 164, 184, 0.6);
+}
+
+.no-btn {
+    padding: 14px 40px;
+    font-size: 1.2rem;
+    background-color: #f0e6dc;
+    color: #888;
+}
+
+.no-btn:hover {
+    background-color: #e8ddd3;
+}
+
+/* Confetti */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.confetti-piece {
+    position: absolute;
+    top: -10px;
+    width: 8px;
+    height: 8px;
+    background-color: #f8a4b8;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Yes celebration */
+.celebration {
+    font-size: 2.5rem;
+    color: #c0392b;
+    margin-top: 20px;
+    animation: bounceIn 0.5s ease;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
